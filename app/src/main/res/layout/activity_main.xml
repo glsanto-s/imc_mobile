@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -38,7 +44,7 @@
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="35dp"
         android:ems="10"
         android:hint="Peso"
         android:inputType="numberDecimal"
@@ -50,13 +56,26 @@
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="15dp"
         android:ems="10"
         android:hint="Altura"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/peso"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
@@ -97,4 +116,35 @@
         app:layout_constraintTop_toBottomOf="@+id/res_IMC"
         app:srcCompat="@drawable/tabela_imc" />
 
+    <Button
+        android:id="@+id/btn_Mostrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="20dp"
+        android:text="Mostrar usuários"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peso" />
+
+    <TextView
+        android:id="@+id/res_Usuarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginEnd="20dp"
+        android:text="Usuarios:"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:padding="10dp"
+        android:textAlignment="viewStart"
+        android:lineSpacingExtra="8dp"
+        android:textIsSelectable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Limpar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
