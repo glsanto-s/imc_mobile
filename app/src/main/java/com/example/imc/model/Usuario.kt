@@ -7,9 +7,9 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "tabela_usuario")
 data class Usuario (
 
-    @ColumnInfo(name = "nome") val nome: String?,
-    @ColumnInfo(name = "peso") val peso: Float?,
-    @ColumnInfo(name = "altura") val altura: Float?,
+    @ColumnInfo(name = "nome") var nome: String?,
+    @ColumnInfo(name = "peso") var peso: Float?,
+    @ColumnInfo(name = "altura") var altura: Float?,
     @ColumnInfo(name = "imc") val imc: Float?
 ){
     @PrimaryKey(autoGenerate = true)
